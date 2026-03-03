@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/db";
-import { User } from "@/lib/models/User";
-import { paystackHeaders } from "@/utils/paystack";
+import { connectDB } from "@/app/lib/db";
+import { User } from "@/app/lib/models/User";
+import { paystackHeaders } from "@/app/utils/paystack";
 
 export async function POST(req) {
   try {

@@ -34,7 +34,7 @@ export default function Testimonials() {
             transition={{ delay: idx * 0.2 }}
             className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition"
           >
-            <p className="text-gray-700">"{t.text}"</p>
+            <p className="text-gray-700">&quot;{t.text}&quot;</p>
             <p className="mt-4 font-semibold text-gray-800">- {t.name}</p>
           </motion.div>
         ))}
