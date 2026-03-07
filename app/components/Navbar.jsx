@@ -53,13 +53,13 @@ export default function Navbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block rounded-full bg-slate-900 px-6 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95">
+          <button className="hidden cursor-pointer sm:block rounded-full bg-slate-900 px-6 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95">
             Register
           </button>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-slate-600"
+            className="md:hidden p-2 text-slate-600 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -83,12 +83,12 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className="text-lg hover:text-orange-600 transition-colors"
-                  onClick={() => setIsOpen(false)} // Close menu on click
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <button className="mt-2 w-full rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white">
+              <button className="mt-2 w-full cursor-pointer rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white">
                 Register
               </button>
             </div>

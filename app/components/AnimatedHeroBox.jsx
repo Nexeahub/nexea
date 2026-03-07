@@ -49,7 +49,6 @@ export default function AnimatedHeroBox() {
             filter: "blur(20px)",
           }}
         />
-
         <div className="relative z-10 flex gap-6 mb-8">
           {[
             {
@@ -92,7 +91,7 @@ export default function AnimatedHeroBox() {
               className="flex flex-col items-center gap-4"
             >
               <div
-                className={`w-10 h-10 md:w-20 md:h-20 rounded-3xl bg-gradient-to-b ${asset.color} to-transparent border border-white/10 backdrop-blur-md flex items-center justify-center shadow-2xl relative group`}
+                className={`w-10 h-10 md:w-20 md:h-20 rounded-3xl bg-gradient-to-b ${asset.color} to-transparent border border-white/10 backdrop-blur-md flex items-center justify-center relative group`}
               >
                 <Image
                   src={asset.icon}
@@ -108,15 +107,14 @@ export default function AnimatedHeroBox() {
             </motion.div>
           ))}
         </div>
-
         {/* THE QUANTUM VAULT (BOX) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="relative w-64 h-48 md:w-80 md:h-56 z-20"
         >
-          <div className="absolute inset-0 bg-slate-900 border-2 border-white/10 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden">
-            <div className="h-12 w-12 rounded-xl bg-orange-600 flex items-center justify-center text-white font-bold italic shadow-[0_0_30px_rgba(234,88,12,0.4)]">
+          <div className="absolute inset-0 bg-slate-900 border-2 border-white/10 rounded-3xl flex items-center justify-center overflow-hidden">
+            <div className="h-12 w-12 rounded-xl bg-orange-600 flex items-center justify-center text-white font-bold italic ">
               N
             </div>
             <motion.div
@@ -138,7 +136,7 @@ export default function AnimatedHeroBox() {
               ease: [0.45, 0, 0.55, 1],
               delay: 0.5,
             }}
-            className="absolute inset-0 bg-slate-800 border-2 border-white/20 rounded-3xl z-30 shadow-2xl flex items-center justify-end px-4 overflow-hidden"
+            className="absolute inset-0 bg-slate-800 border-2 border-white/20 rounded-3xl z-30 flex items-center justify-end px-4 overflow-hidden"
           >
             {/* --- ANIMATED DOT PATTERN LAYER --- */}
             <motion.div
@@ -168,8 +166,7 @@ export default function AnimatedHeroBox() {
               <div className="w-1 h-8 bg-white/10 rounded-full" />
             </div>
           </motion.div>
-        </motion.div>
-
+        </motion.div>{" "}
         {/* GROUND ENERGY RING */}
         <div className="relative mt-4">
           <motion.div
