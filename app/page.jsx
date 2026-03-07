@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import FeaturesGrid from "./components/FeaturesGrid";
 import AboutUsSection from "./components/AboutUsSection";
 import PricingSection from "./components/PricingSection";
+import RoadmapsSection from "./components/RoadmapsSection";
 
 export default function HomePage() {
   return (
@@ -14,10 +15,7 @@ export default function HomePage() {
       <Hero />
       <AboutUsSection />
       <PricingSection />
-      <FeaturesGrid />
-      <LearnSection />
-      <ServicesSection />
-      <Testimonials />
+      <RoadmapsSection />
     </>
   );
 }
