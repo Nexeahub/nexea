@@ -1,96 +1,136 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
+import {
+  Monitor,
+  ShoppingBag,
+  Smartphone,
+  Settings,
+  Palette,
+  Rocket,
+  MessageSquare,
+  FileCode,
+  Send,
+} from "lucide-react";
+
+const services = [
+  {
+    icon: <Monitor className="w-5 h-5 text-orange-500" />,
+    title: "Business Websites",
+    desc: "Professional corporate presence.",
+  },
+  {
+    icon: <ShoppingBag className="w-5 h-5 text-orange-500" />,
+    title: "E-commerce Systems",
+    desc: "Full-scale online stores.",
+  },
+  {
+    icon: <Palette className="w-5 h-5 text-orange-500" />,
+    title: "UX/UI Design",
+    desc: "Modern, high-conversion interfaces.",
+  },
+  {
+    icon: <FileCode className="w-5 h-5 text-orange-500" />,
+    title: "Custom Web Apps",
+    desc: "Bespoke software solutions.",
+  },
+];
+
+const steps = [
+  { title: "Consult", icon: <MessageSquare /> },
+  { title: "Design", icon: <Palette /> },
+  { title: "Build", icon: <FileCode /> },
+  { title: "Deploy", icon: <Send /> },
+];
 
 export default function ServicesSection() {
-  const plans = [
-    {
-      title: "Basic Website",
-      price: "₦50,000",
-      desc: ["1–3 Pages", "Mobile Responsive", "Basic SEO", "Fast Delivery"],
-      whatsapp:
-        "https://wa.me/2348100000000?text=Hi%2C%20I'm%20interested%20in%20the%20Basic%20Website%20plan",
-    },
-    {
-      title: "Standard Website",
-      price: "₦120,000",
-      desc: [
-        "3–6 Pages",
-        "Custom Design",
-        "SEO Optimized",
-        "Blog Integration",
-        "Fast Delivery",
-      ],
-      whatsapp:
-        "https://wa.me/2348100000000?text=Hi%2C%20I'm%20interested%20in%20the%20Standard%20Website%20plan",
-      featured: true,
-    },
-    {
-      title: "Premium Website",
-      price: "₦180,000+",
-      desc: [
-        "Unlimited Pages",
-        "Premium UI/UX",
-        "Custom Dashboard",
-        "API Integrations",
-        "Priority Support",
-      ],
-      whatsapp:
-        "https://wa.me/2348100000000?text=Hi%2C%20I'm%20interested%20in%20the%20Premium%20Website%20plan",
-    },
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white px-5">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl md:text-5xl font-bold text-center text-gray-900"
-      >
-        Website Development Services
-      </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        className="mt-4 text-center text-gray-600 max-w-2xl mx-auto"
-      >
-        Choose a plan that suits your business. Get a modern website delivered
-        fast!
-      </motion.p>
-
-      <div className="mt-14 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 + idx * 0.1 }}
-            className={`border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition ${plan.featured ? "bg-blue-50" : "bg-white"}`}
-          >
-            <h3 className="text-2xl font-semibold text-gray-800">
-              {plan.title}
+    <section className="bg-white py-24 px-6 text-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
+          {/* LEFT: CONTENT & PROCESS */}
+          <div className="lg:col-span-5 mb-16 lg:mb-0">
+            <h2 className="text-orange-600 font-bold tracking-widest uppercase text-xs mb-4">
+              Agency Services
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 mb-6">
+              You Dream it. <br />
+              <span className="text-orange-600 italic">We Build it.</span>
             </h3>
-            <p className="text-gray-500 mt-2">Plan Description</p>
-            <p className="mt-6 text-4xl font-bold text-blue-600">
-              {plan.price}
+            <p className="text-slate-500 text-lg mb-10 leading-relaxed">
+              Beyond the academy, Nexa operates as a world-class development
+              agency. We take your vision and turn it into a high-performance
+              digital reality.
             </p>
-            <ul className="mt-6 space-y-3 text-gray-600">
-              {plan.desc.map((d, i) => (
-                <li key={i}>✓ {d}</li>
+
+            {/* THE PROCESS FLOW */}
+            <div className="grid grid-cols-4 gap-2 mb-10">
+              {steps.map((step, i) => (
+                <div key={i} className="flex flex-col items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group hover:border-orange-200 hover:text-orange-500 transition-all">
+                    {step.icon}
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    {step.title}
+                  </span>
+                </div>
               ))}
-            </ul>
-            <a
-              href={plan.whatsapp}
-              target="_blank"
-              className="block w-full text-center mt-8 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+            </div>
+
+            <div className="p-6 rounded-3xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <p className="text-slate-400 text-sm">Starting from</p>
+                <p className="text-2xl font-black">Custom Pricing</p>
+              </div>
+              <button className="w-full sm:w-auto px-8 py-3 bg-orange-600 hover:bg-orange-500 rounded-full font-bold transition-all shadow-lg shadow-orange-900/20">
+                Build My Website
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT: BENTO GRID OF SERVICES */}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+            {services.map((service, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all"
+              >
+                <div className="mb-6 p-3 w-fit rounded-2xl bg-white shadow-sm">
+                  {service.icon}
+                </div>
+                <h4 className="text-xl font-bold mb-2">{service.title}</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+
+            {/* MINI PORTFOLIO CTA CARD */}
+            <motion.div
+              className="sm:col-span-2 p-8 rounded-[2rem] bg-gradient-to-br from-orange-50 to-white border border-orange-100 flex items-center justify-between overflow-hidden relative"
+              whileHover={{ scale: 1.02 }}
             >
-              Contact on WhatsApp
-            </a>
-          </motion.div>
-        ))}
+              <div className="relative z-10">
+                <h4 className="text-xl font-black text-orange-900 mb-1">
+                  View our Work
+                </h4>
+                <p className="text-orange-700/70 text-sm">
+                  Explore our agency portfolio of 50+ launched sites.
+                </p>
+              </div>
+              <div className="h-12 w-12 rounded-full bg-orange-600 flex items-center justify-center text-white relative z-10">
+                <Rocket className="w-5 h-5" />
+              </div>
+              {/* Decorative Circle */}
+              <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-200/30 rounded-full blur-3xl" />
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

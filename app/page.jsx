@@ -8,6 +8,7 @@ import FeaturesGrid from "./components/FeaturesGrid";
 import AboutUsSection from "./components/AboutUsSection";
 import PricingSection from "./components/PricingSection";
 import RoadmapsSection from "./components/RoadmapsSection";
+import ServicePackages from "./components/ServicePackages";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,8 @@ export default function HomePage() {
       <AboutUsSection />
       <PricingSection />
       <RoadmapsSection />
+      <ServicesSection />
+      <ServicePackages />
     </>
   );
 }
