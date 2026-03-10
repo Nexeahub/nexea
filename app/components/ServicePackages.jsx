@@ -49,6 +49,14 @@ const packages = [
   },
 ];
 
+const handleWhatsApp = (pkg) => {
+  const message = `Hello, I'm interested in the *${pkg.name}* package (${pkg.price}). I would like to get started.`;
+
+  const url = `https://wa.me/2349030866613?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
 export default function ServicePackages() {
   return (
     <div id="solutions" className="mt-20 container mx-auto px-6">
@@ -117,7 +125,8 @@ export default function ServicePackages() {
             </ul>
 
             <button
-              className={`w-full py-4 rounded-2xl font-bold transition-all ${
+              onClick={() => handleWhatsApp(pkg)}
+              className={`w-full cursor-pointer py-4 rounded-2xl font-bold transition-all ${
                 pkg.highlight
                   ? "bg-orange-600 text-white hover:bg-orange-700 shadow-lg shadow-orange-200"
                   : "bg-slate-900 text-white hover:bg-slate-800"
