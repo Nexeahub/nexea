@@ -118,7 +118,7 @@ const AdmissionReceipt = ({ registration }) => {
       );
 
       pdf.text(
-        "2. Access the Pre-Cohort Curriculum starting March 20th.",
+        "2. Follow Nexa on X for ecosystem updates and pioneer news.",
         25,
         202,
       );
