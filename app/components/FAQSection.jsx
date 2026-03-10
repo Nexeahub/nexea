@@ -98,9 +98,15 @@ export default function FAQSection() {
             <p className="text-slate-400 text-sm mb-4">
               Still have questions about the ₦50,000 launch offer?
             </p>
-            <button className="text-orange-500 font-bold hover:underline underline-offset-8">
-              Chat with a Founder on WhatsApp →
-            </button>
+            <a
+              href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20make%20more%20enquiries%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="text-orange-500 font-bold hover:underline underline-offset-8">
+                Chat with a Founder on WhatsApp →
+              </button>
+            </a>
           </div>
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-orange-600/10 blur-3xl rounded-full" />

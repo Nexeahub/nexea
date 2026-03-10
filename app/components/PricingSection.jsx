@@ -216,7 +216,9 @@ export default function PricingSection() {
           <p className="text-slate-500 text-sm">
             Interested in installments or group discounts?{" "}
             <a
-              href="#"
+              href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20make%20enquiries%20about%20admissions."
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-orange-500 underline underline-offset-4"
             >
               Contact Admissions

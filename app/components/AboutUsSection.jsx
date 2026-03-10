@@ -137,13 +137,16 @@ export default function AboutUsSection() {
               ))}
             </div>
 
-            <motion.button
+            <motion.a
+              href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20learn%20more%20about%20Nexa."
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-10 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-orange-500 hover:text-white transition-all shadow-xl shadow-orange-500/10"
+              className="mt-10 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-orange-500 hover:text-white transition-all shadow-xl shadow-orange-500/10 inline-block"
             >
               Learn More About Nexa
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
