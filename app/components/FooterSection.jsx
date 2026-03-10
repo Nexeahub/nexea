@@ -11,6 +11,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -119,15 +120,18 @@ export default function FooterSection() {
               ))}
             </div>
             <div className="flex gap-8 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link
+                href="/terms"
+                className="hover:text-orange-500 transition-colors"
+              >
                 Terms
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link
+                href="/privacy"
+                className="hover:text-orange-500 transition-colors"
+              >
                 Privacy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Admissions
-              </a>
+              </Link>
             </div>
           </div>
         </div>
