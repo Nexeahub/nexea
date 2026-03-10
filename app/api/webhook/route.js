@@ -1,20 +1,37 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/app/lib/db";
-import { User } from "@/app/lib/models/User";
+import RegistrationSchema from "@/app/lib/models/RegistrationSchema";
 
 export async function POST(req) {
-  const body = await req.json();
+  try {
+    const body = await req.json();
 
-  if (body.event === "charge.success") {
-    await connectDB();
+    // Only handle successful payments
+    if (body.event === "charge.success") {
+      await connectDB();
 
-    const ref = body.data.reference;
+      const ref = body.data.reference;
 
-    await User.findByIdAndUpdate(ref, {
-      status: "paid",
-      paymentReference: body.data.reference,
-    });
+      const updated = await RegistrationSchema.findByIdAndUpdate(
+        ref,
+        {
+          paymentStatus: "paid",
+          paymentReference: body.data.reference,
+        },
+        { new: true }, // returns the updated document (optional)
+      );
+
+      if (!updated) {
+        console.warn(`Registration with reference ${ref} not found`);
+      }
+    }
+
+    return NextResponse.json({ status: "ok" });
+  } catch (error) {
+    console.error("Webhook error:", error);
+    return NextResponse.json(
+      { error: error.message || "Server error" },
+      { status: 500 },
+    );
   }
-
-  return NextResponse.json({ status: "ok" });
 }
