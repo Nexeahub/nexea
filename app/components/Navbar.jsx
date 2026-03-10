@@ -92,9 +92,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <button className="mt-2 w-full cursor-pointer rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white">
+              <Link
+                href="/register"
+                className="mt-2 w-full text-center cursor-pointer rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white"
+              >
                 Register
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}

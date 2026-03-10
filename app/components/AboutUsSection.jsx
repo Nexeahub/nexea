@@ -93,7 +93,7 @@ export default function AboutUsSection() {
                 </p>
               </div> */}
 
-              <div className="h-64 rounded-3xl bg-gradient-to-t from-slate-900 to-slate-800 border border-white/10 p-8 flex flex-col justify-between">
+              <div className="h-64 rounded-3xl bg-gradient-to-t from-slate-900 to-slate-800 border border-white/10 p-4 flex flex-col justify-between">
                 <div className="flex -space-x-2">
                   {[1, 2, 3].map((i) => (
                     <div
@@ -103,13 +103,13 @@ export default function AboutUsSection() {
                   ))}
                 </div>
 
-                <h4 className="text-white font-bold text-lg">
+                <h4 className="text-white font-bold sm:text-lg">
                   Career Opportunities
                 </h4>
 
                 <p className="text-slate-400 text-sm">
-                  Preparing students with the skills needed to pursue
-                  opportunities in the tech industry.
+                  Preparing students with skills to pursue opportunities in the
+                  tech industry.
                 </p>
               </div>
             </div>

@@ -13,6 +13,7 @@ import {
   FileCode,
   Send,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -125,12 +126,15 @@ export default function ServicesSection() {
                   View our Work
                 </h4>
                 <p className="text-orange-700/70 text-sm">
-                  Explore our agency portfolio of 50+ launched sites.
+                  Explore our agency portfolio of 10+ launched sites.
                 </p>
               </div>
-              <div className="h-12 w-12 rounded-full bg-orange-600 flex items-center justify-center text-white relative z-10">
+              <Link
+                href="#portfolio"
+                className="h-12 w-12 rounded-full bg-orange-600 flex items-center justify-center text-white relative z-10"
+              >
                 <Rocket className="w-5 h-5" />
-              </div>
+              </Link>
               {/* Decorative Circle */}
               <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-200/30 rounded-full blur-3xl" />
             </motion.div>

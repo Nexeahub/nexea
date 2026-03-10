@@ -25,11 +25,11 @@ export const metadata = {
     title: "Nexa | Learn Web Development Online in Nigeria",
     description:
       "Join Nexa and master web development with practical projects, expert mentorship, and job-ready skills. Start building your future today!",
-    url: "https://www.yourdomain.com",
+    url: "https://nexa-weld.vercel.app",
     siteName: "Nexa",
     images: [
       {
-        url: "/images/hero-image.png",
+        url: "/nexa-logo.png",
         width: 1024,
         height: 1024,
         alt: "Nexa - Learn Web Development",
@@ -42,7 +42,7 @@ export const metadata = {
     title: "Nexa | Learn Web Development Online in Nigeria",
     description:
       "Join Nexa and master web development with practical projects, expert mentorship, and job-ready skills.",
-    images: ["/images/hero-image.png"],
+    images: ["/nexa-logo.png"],
   },
 };
 

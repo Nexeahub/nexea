@@ -8,7 +8,7 @@ export async function POST(req) {
     const body = await req.json();
     await connectDB();
 
-    const amount = 5000 * 100; // ₦5000 (edit this)
+    const amount = 500 * 100; // ₦5000 (edit this)
 
     const user = await User.create({
       ...body,
