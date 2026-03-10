@@ -41,14 +41,16 @@ export default function FooterSection() {
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-orange-500">
                   <Mail size={18} />
                 </div>
-                <span className="font-medium text-sm">hello@nexa.academy</span>
+                <span className="font-medium text-sm">
+                  seansalvation@gmail.com
+                </span>
               </div>
               <div className="flex items-center gap-4 text-slate-300">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-orange-500">
                   <MapPin size={18} />
                 </div>
                 <span className="font-medium text-sm">
-                  Lagos, Nigeria • Remote Global
+                  Rivers, Nigeria • Remote Global
                 </span>
               </div>
             </div>

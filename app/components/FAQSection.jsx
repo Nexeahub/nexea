@@ -36,7 +36,7 @@ export default function FAQSection() {
   const [activeIdx, setActiveIdx] = useState(null);
 
   return (
-    <section className="bg-white py-24 px-6">
+    <section className="bg-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-widest mb-4">

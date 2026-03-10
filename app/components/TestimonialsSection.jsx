@@ -6,14 +6,14 @@ import { Star, Quote, Rocket, UserCheck, ShieldCheck } from "lucide-react";
 
 const clientProof = [
   {
-    name: "Adebayo S.",
+    name: "Mensah P.",
     role: "Business Owner",
     content:
-      "I hired the Nexa team to build my pharmacy's portal. Not only did they deliver a fast site, but they explained the tech so clearly that I actually understood my own platform. They are natural teachers.",
+      "I hired the Nexa team to build my football academy portal. Not only did they deliver a fast site, but they explained the tech so clearly that I actually understood my own platform. They are natural teachers.",
     label: "Agency Client",
   },
   {
-    name: "Emeka J.",
+    name: "Princess P.",
     role: "Startup Founder",
     content:
       "The way Nexa handles code is different. They don't just 'fix' things; they show you why they work. If they are teaching now, you'd be crazy not to join.",
@@ -32,7 +32,7 @@ const betaStudent = {
 export default function TestimonialsSection() {
   return (
     <section className="bg-slate-50 py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
             <div className="flex items-center gap-2 text-orange-600 font-bold text-xs uppercase tracking-widest mb-3">
