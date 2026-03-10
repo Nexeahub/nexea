@@ -80,7 +80,10 @@ const tracks = [
 
 export default function PricingSection() {
   return (
-    <section className="bg-[#020617] py-24 px-6 relative overflow-hidden">
+    <section
+      id="pricing"
+      className="bg-[#020617] py-24 px-6 relative overflow-hidden"
+    >
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-orange-600/5 blur-[120px] rounded-full pointer-events-none" />
 

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import AnimatedHeroBox from "./AnimatedHeroBox";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -39,12 +40,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 md:mx-auto lg:mx-0">
-            <button className="group relative cursor-pointer overflow-hidden rounded-full bg-slate-900 px-8 md:px-4 xl:px-8 py-4 font-bold text-white transition-all hover:bg-orange-600">
-              <span className="relative z-10">Start Learning Free</span>
+            <Link
+              href="/#pricing"
+              className="group relative cursor-pointer overflow-hidden rounded-full bg-slate-900 px-8 md:px-4 xl:px-8 py-4 font-bold text-white transition-all hover:bg-orange-600"
+            >
+              <span className="relative z-10">Start Learning</span>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-orange-600 to-orange-400 opacity-0 transition-opacity group-hover:opacity-100" />
-            </button>
+            </Link>
 
-            <button className="flex items-center cursor-pointer justify-center gap-2 rounded-full border-2 border-slate-200 px-8 md:px-4 xl:px-8 py-4 font-bold text-slate-700 transition-all hover:border-slate-900 hover:bg-slate-50">
+            <Link
+              href="/#solutions"
+              className="flex items-center cursor-pointer justify-center gap-2 rounded-full border-2 border-slate-200 px-8 md:px-4 xl:px-8 py-4 font-bold text-slate-700 transition-all hover:border-slate-900 hover:bg-slate-50"
+            >
               Hire Us to Build Your Site
               <svg
                 className="h-4 w-4"
@@ -59,7 +66,7 @@ export default function Hero() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
 
           {/* Social Proof / Trust Marks */}

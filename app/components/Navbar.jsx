@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +22,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: "Features", href: "#" },
-    { name: "Resources", href: "#" },
-    { name: "Solutions", href: "#" },
-    { name: "Pricing", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "Solutions", href: "/#solutions" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Portfolio", href: "/#portfolio" },
   ];
 
   return (
@@ -41,21 +42,24 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="hover:text-orange-600 transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <button className="hidden cursor-pointer sm:block rounded-full bg-slate-900 px-6 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95">
+          <Link
+            href="/register"
+            className="hidden cursor-pointer sm:block rounded-full bg-slate-900 px-6 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95"
+          >
             Register
-          </button>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -79,14 +83,14 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-4 px-6 py-6 font-medium text-slate-600">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-lg hover:text-orange-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <button className="mt-2 w-full cursor-pointer rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white">
                 Register
