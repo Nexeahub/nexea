@@ -49,9 +49,13 @@ export default function AboutUsSection() {
                   Curriculum vetted by top CTOs.
                 </p>
               </div>
-              <div className="h-48 rounded-3xl bg-orange-600 p-8 flex flex-col justify-center text-white shadow-orange-900/20 shadow-2xl">
+              {/* <div className="h-48 rounded-3xl bg-orange-600 p-8 flex flex-col justify-center text-white shadow-orange-900/20 shadow-2xl">
                 <span className="text-4xl font-black italic">10k+</span>
                 <p className="font-medium">Students Graduated</p>
+              </div> */}
+              <div className="h-48 rounded-3xl bg-orange-600 p-8 flex flex-col justify-center text-white shadow-orange-900/20 shadow-2xl">
+                <span className="text-4xl font-black italic">New</span>
+                <p className="font-medium">Launching Our First Cohort</p>
               </div>
             </div>
             <div className="space-y-4 pt-8">
@@ -72,7 +76,7 @@ export default function AboutUsSection() {
                   </p>
                 </div>
               </div>
-              <div className="h-64 rounded-3xl bg-gradient-to-t from-slate-900 to-slate-800 border border-white/10 p-8 flex flex-col justify-between">
+              {/* <div className="h-64 rounded-3xl bg-gradient-to-t from-slate-900 to-slate-800 border border-white/10 p-8 flex flex-col justify-between">
                 <div className="flex -space-x-2">
                   {[1, 2, 3].map((i) => (
                     <div
@@ -86,6 +90,26 @@ export default function AboutUsSection() {
                 </h4>
                 <p className="text-slate-400 text-sm">
                   Direct pipeline to tech giants.
+                </p>
+              </div> */}
+
+              <div className="h-64 rounded-3xl bg-gradient-to-t from-slate-900 to-slate-800 border border-white/10 p-8 flex flex-col justify-between">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-700"
+                    />
+                  ))}
+                </div>
+
+                <h4 className="text-white font-bold text-lg">
+                  Career Opportunities
+                </h4>
+
+                <p className="text-slate-400 text-sm">
+                  Preparing students with the skills needed to pursue
+                  opportunities in the tech industry.
                 </p>
               </div>
             </div>
