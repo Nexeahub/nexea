@@ -94,6 +94,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/register"
+                onClick={() => setIsOpen(!isOpen)}
                 className="mt-2 w-full text-center cursor-pointer rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white"
               >
                 Register
