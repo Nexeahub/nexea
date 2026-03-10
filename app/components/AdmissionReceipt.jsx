@@ -94,6 +94,11 @@ const AdmissionReceipt = ({ registration }) => {
       pdf.setFontSize(9);
       pdf.setTextColor(180, 180, 180);
       pdf.text(`Ref: ${registration.paymentReference}`, 125, 132);
+      pdf.text(
+        `RECEIPT ID: NX-${new Date(registration.createdAt).getFullYear()}-${registration._id.toString().slice(-4)}`.toUpperCase(),
+        125,
+        138,
+      );
 
       // Next Steps
       pdf.setFillColor(10, 15, 25);

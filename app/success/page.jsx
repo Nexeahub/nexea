@@ -189,14 +189,14 @@ export default function SuccessPage() {
             Payment <span className="text-orange-500 italic">Confirmed!</span>
           </h1>
           <p className="text-slate-400 text-lg mb-12">
-            Welcome to Nexa, Pioneer. You&apos;re officially enrolled in the{" "}
-            <br />
+            Welcome to Nexa,&nbsp;
+            <span className="text-orange-500 italic">{registration.name}</span>
+            . You&apos;re officially enrolled in the <br />
             <span className="text-white font-bold">
               Frontend Founding Cohort (V1.0).
             </span>
           </p>
 
-          {/* THE MEMBER TICKET / ID CARD */}
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -218,7 +218,10 @@ export default function SuccessPage() {
                 <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">
                   Receipt ID
                 </p>
-                <p className="font-mono text-xs text-slate-300">NX-2026-0042</p>
+                <p className="font-mono text-xs text-slate-300 uppercase">
+                  NX-{new Date(registration.createdAt).getFullYear()}-
+                  {registration._id.toString().slice(-4)}
+                </p>
               </div>
             </div>
 
@@ -228,8 +231,7 @@ export default function SuccessPage() {
                   Onboarding
                 </p>
                 <div className="flex items-center gap-2 text-sm font-bold">
-                  <Calendar size={16} className="text-orange-500" /> March 25,
-                  2026
+                  <Calendar size={16} className="text-orange-500" /> May 4, 2026
                 </div>
               </div>
               <div>
@@ -243,13 +245,11 @@ export default function SuccessPage() {
               </div>
             </div>
 
-            {/* Inside your SuccessPage.tsx */}
             <div className="max-w-md mx-auto w-full">
               <AdmissionReceipt registration={registration} />
             </div>
           </motion.div>
 
-          {/* NEXT STEPS */}
           <div className="grid md:grid-cols-2 gap-4">
             <motion.a
               whileHover={{ scale: 1.02 }}
