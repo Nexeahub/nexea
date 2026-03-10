@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative overflow-hidden px-6 py-14">
       <div className="absolute top-0 left-1/2 -z-10 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-orange-50/50 blur-[120px]" />
 
-      <div className="mx-auto max-w-7xl container grid lg:grid-cols-2 gap-16">
+      <div className="mx-auto container grid lg:grid-cols-2 gap-16">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}

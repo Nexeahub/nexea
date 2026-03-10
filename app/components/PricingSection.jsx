@@ -84,7 +84,7 @@ export default function PricingSection() {
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-orange-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex justify-between items-start mb-6">
                   <div
                     className={`p-3 rounded-2xl bg-slate-800 border border-white/5`}

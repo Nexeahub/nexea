@@ -51,7 +51,7 @@ const packages = [
 
 export default function ServicePackages() {
   return (
-    <div className="mt-20">
+    <div className="mt-20 container mx-auto px-6">
       <div className="text-center mb-12">
         <h4 className="text-2xl font-black text-slate-900 tracking-tight">
           Standard Service Packages
@@ -61,7 +61,7 @@ export default function ServicePackages() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-3 gap-8">
         {packages.map((pkg, i) => (
           <motion.div
             key={i}

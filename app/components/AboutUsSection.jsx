@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Code2, Rocket, Users, Award } from "lucide-react";
+import { Code2, Rocket, Users, Award } from "lucide-react";
 
 const features = [
   {
@@ -30,7 +30,7 @@ export default function AboutUsSection() {
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 -z-0 h-[500px] w-[500px] bg-orange-600/5 blur-[120px] rounded-full" />
 
-      <div className="mx-auto max-w-7xl relative z-10">
+      <div className="mx-auto container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Professional Image/Icon Grid */}
           <motion.div

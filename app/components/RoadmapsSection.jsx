@@ -49,7 +49,7 @@ const roadmaps = [
 export default function RoadmapsSection() {
   return (
     <section className="bg-slate-950 py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div className="max-w-xl">
             <h2 className="text-orange-500 font-bold tracking-widest uppercase text-xs mb-2">
@@ -65,7 +65,7 @@ export default function RoadmapsSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-16">
           {roadmaps.map((route, routeIdx) => (
             <div
               key={routeIdx}
