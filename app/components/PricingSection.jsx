@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check, Lock, ArrowRight, Zap, Database, Globe } from "lucide-react";
+import Link from "next/link";
 
 const tracks = [
   {
@@ -197,19 +198,21 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                <button
-                  disabled={track.status === "locked"}
-                  className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${
-                    track.status === "active"
-                      ? "bg-white text-black hover:bg-orange-600 hover:text-white"
-                      : "bg-slate-800 text-slate-500 cursor-not-allowed"
-                  }`}
-                >
-                  {track.buttonText}
-                  {track.status === "active" && (
-                    <ArrowRight className="w-4 h-4" />
-                  )}
-                </button>
+                {track.status === "active" ? (
+                  <Link href="/register">
+                    <button className="w-full py-4 cursor-pointer rounded-xl font-bold flex items-center justify-center gap-2 transition-all bg-white text-black hover:bg-orange-600 hover:text-white">
+                      {track.buttonText}
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all bg-slate-800 text-slate-500 cursor-not-allowed"
+                  >
+                    {track.buttonText}
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}
