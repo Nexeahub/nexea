@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import {
@@ -8,13 +8,18 @@ import {
   Discord,
   Calendar,
   ArrowRight,
-  Copy,
   Sparkles,
-  Download,
   Twitter,
+  AlertCircle,
 } from "lucide-react";
+import AdmissionReceipt from "../components/AdmissionReceipt";
+import Link from "next/link";
 
 export default function SuccessPage() {
+  const [registration, setRegistration] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   // Trigger confetti on mount
   useEffect(() => {
     const duration = 3 * 1000;
@@ -36,13 +41,129 @@ export default function SuccessPage() {
         colors: ["#ea580c", "#ffffff"],
       });
 
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
+      if (Date.now() < end) requestAnimationFrame(frame);
     };
     frame();
   }, []);
 
+  useEffect(() => {
+    setLoading(true);
+    const fetchRegistration = async () => {
+      const params = new URLSearchParams(window.location.search);
+
+      const paystackRef = params.get("reference");
+
+      if (!paystackRef) {
+        console.error("No reference found in URL");
+        setLoading(false);
+        return;
+      }
+
+      setLoading(true);
+      try {
+        // Pass the paystackRef to your API
+        const res = await fetch(`/api/registration?ref=${paystackRef}`);
+        const data = await res.json();
+
+        if (data.success) {
+          setRegistration(data.data);
+        } else {
+          console.error(
+            "Registration not found in DB for this ref:",
+            paystackRef,
+          );
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRegistration();
+  }, []);
+
+  if (loading)
+    return (
+      <div className="min-h-screen bg-[#020617] flex flex-col items-center justify-center text-white relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute w-[400px] h-[400px] bg-orange-600/10 blur-[120px] rounded-full animate-pulse" />
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="relative z-10 flex flex-col items-center"
+        >
+          {/* Pulsing Logo placeholder */}
+          <div className="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center font-black text-2xl italic mb-8 animate-bounce shadow-[0_0_30px_rgba(234,88,12,0.3)]">
+            N
+          </div>
+
+          <h2 className="text-xl font-bold tracking-tight mb-2">
+            Securing your spot...
+          </h2>
+          <p className="text-slate-500 text-sm mb-6">
+            Verifying payment with Paystack
+          </p>
+
+          {/* Shimmering Progress Bar */}
+          <div className="w-48 h-1 bg-white/5 rounded-full overflow-hidden">
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: "100%" }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+              className="w-full h-full bg-gradient-to-r from-transparent via-orange-500 to-transparent"
+            />
+          </div>
+        </motion.div>
+      </div>
+    );
+  if (!registration || error)
+    return (
+      <div className="min-h-screen bg-[#020617] flex items-center justify-center px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-md w-full bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-xl text-center"
+        >
+          <div className="w-20 h-20 bg-red-500/10 border border-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
+            <AlertCircle size={40} />
+          </div>
+
+          <h2 className="text-2xl font-black tracking-tight text-white mb-4">
+            Session Not Found
+          </h2>
+
+          <p className="text-slate-400 text-sm mb-8 leading-relaxed">
+            We couldn&apos;t retrieve your enrollment details. This usually
+            happens if the payment reference is invalid or the session expired.
+          </p>
+
+          <div className="space-y-3">
+            <button
+              onClick={() => window.location.reload()}
+              className="w-full py-4 bg-white text-black font-bold rounded-2xl hover:bg-slate-200 transition-colors"
+            >
+              Retry Connection
+            </button>
+
+            <Link
+              href="/"
+              className="block w-full py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-colors"
+            >
+              Back to Homepage
+            </Link>
+          </div>
+
+          {error && (
+            <p className="mt-6 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
+              Error Code: {error}
+            </p>
+          )}
+        </motion.div>
+      </div>
+    );
   return (
     <div className="min-h-screen bg-[#020617] text-white flex items-center justify-center pt-20 pb-12 px-6 overflow-hidden relative">
       {/* Decorative Glow */}
@@ -122,9 +243,10 @@ export default function SuccessPage() {
               </div>
             </div>
 
-            <button className="w-full cursor-pointer flex items-center justify-center gap-2 py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold hover:bg-white/10 transition-all">
-              <Download size={14} /> Download Admissions Receipt
-            </button>
+            {/* Inside your SuccessPage.tsx */}
+            <div className="max-w-md mx-auto w-full">
+              <AdmissionReceipt registration={registration} />
+            </div>
           </motion.div>
 
           {/* NEXT STEPS */}

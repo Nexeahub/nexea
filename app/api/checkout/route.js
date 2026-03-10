@@ -27,8 +27,16 @@ export async function POST(req) {
       email: body.email,
       whatsapp: body.whatsapp,
       track: body.track,
-      paymentStatus: "pending", // initial status
+      paymentStatus: "pending",
+      paymentReference: "",
     });
+
+    // 2. Use the generated MongoDB ID as the reference
+    const refId = registration._id.toString();
+
+    // 3. Update the document with that reference
+    registration.paymentReference = refId;
+    await registration.save();
 
     // Initialize Paystack transaction
     const res = await fetch("https://api.paystack.co/transaction/initialize", {
@@ -37,7 +45,7 @@ export async function POST(req) {
       body: JSON.stringify({
         email: body.email,
         amount,
-        reference: registration._id.toString(),
+        reference: refId,
         callback_url: process.env.PAYSTACK_CALLBACK_URL,
       }),
     });

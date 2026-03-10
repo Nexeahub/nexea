@@ -6,7 +6,6 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
-    // Only handle successful payments
     if (body.event === "charge.success") {
       await connectDB();
 
@@ -18,7 +17,7 @@ export async function POST(req) {
           paymentStatus: "paid",
           paymentReference: body.data.reference,
         },
-        { new: true }, // returns the updated document (optional)
+        { new: true },
       );
 
       if (!updated) {

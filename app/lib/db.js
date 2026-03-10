@@ -19,7 +19,7 @@ export const connectDB = async () => {
     }
 
     await mongoose.connect(MONGODB_URI, {
-      dbName: "yourDatabaseName",
+      dbName: "nexa-db",
     });
 
     console.log("✅ MongoDB Connected Successfully");
