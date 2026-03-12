@@ -55,6 +55,16 @@ const projects = [
     github: "https://github.com/CypherX-Mobile-LTD/web-app",
     category: "Frontend",
   },
+
+  {
+    name: "Travel App",
+    desc: "A dynamic travel platform where users can book flights between countries, check real-time weather updates, and plan trips with ease.",
+    image: "/images/projects/travel.png",
+    tech: ["React.js", "Tailwind", "JavaScript", "Framer Motion"],
+    live: "https://the-traveller-beta.vercel.app",
+    github: "https://github.com/salv20/TheTraveller",
+    category: "Frontend",
+  },
 ];
 
 export default function PortfolioSection() {

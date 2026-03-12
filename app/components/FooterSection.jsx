@@ -14,6 +14,16 @@ import {
 import Link from "next/link";
 import FooterForm from "./FooterForm";
 
+const socialLinks = [
+  { Icon: Twitter, href: "https://twitter.com/nexea" },
+  {
+    Icon: Linkedin,
+    href: "https://www.linkedin.com/in/salvation-amoke-6b89a7248",
+  },
+  { Icon: Instagram, href: "https://www.instagram.com/salv_web" },
+  { Icon: Github, href: "https://github.com/salv20" },
+];
+
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
 
@@ -43,9 +53,7 @@ export default function FooterSection() {
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-orange-500">
                   <Mail size={18} />
                 </div>
-                <span className="font-medium text-sm">
-                  seansalvation@gmail.com
-                </span>
+                <span className="font-medium text-sm">nexeahub@gmail.com</span>
               </div>
               <div className="flex items-center gap-4 text-slate-300">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-orange-500">
@@ -89,7 +97,7 @@ export default function FooterSection() {
 
           <div className="flex flex-col items-center md:items-end gap-6">
             <div className="flex gap-4">
-              {[Twitter, Linkedin, Instagram, Github].map((Icon, idx) => (
+              {/* {[Twitter, Linkedin, Instagram, Github].map((Icon, idx) => (
                 <a
                   key={idx}
                   href="#"
@@ -97,7 +105,21 @@ export default function FooterSection() {
                 >
                   <Icon size={18} />
                 </a>
-              ))}
+              ))} */}
+
+              <div className="flex gap-3">
+                {socialLinks.map(({ Icon, href }, idx) => (
+                  <a
+                    key={idx}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-slate-900 border border-white/5 flex items-center justify-center text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all"
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
+              </div>
             </div>
             <div className="flex gap-8 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
               <Link

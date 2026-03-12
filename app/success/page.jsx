@@ -254,7 +254,7 @@ export default function SuccessPage() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="https://discord.gg/your-link"
+              href="https://discord.gg/eJSKB6GjAq"
               className="flex items-center justify-center gap-3 bg-[#5865F2] py-4 rounded-2xl font-bold shadow-lg shadow-indigo-900/20"
             >
               Join Private Discord <ArrowRight size={18} />
@@ -267,7 +267,7 @@ export default function SuccessPage() {
                 borderColor: "rgba(29, 155, 240, 0.4)",
               }}
               whileTap={{ scale: 0.98 }}
-              href="https://twitter.gg/your-link"
+              href="https://x.com/Nexeabuzz"
               className="relative flex items-center justify-center gap-3 bg-slate-900/50 backdrop-blur-md py-4 px-8 rounded-2xl font-bold border border-white/10 group overflow-hidden transition-colors"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

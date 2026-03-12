@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
         <div className="mt-20 text-center border-t border-white/5 pt-12">
           <p className="text-slate-500 text-sm">Questions about your data?</p>
           <a
-            href="mailto:seansalvation@gmail.com"
+            href="mailto:nexeahub@gmail.com"
             className="text-orange-500 font-bold hover:underline underline-offset-8 mt-2 inline-block"
           >
             privacy@nexa.academy
