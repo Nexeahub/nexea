@@ -12,6 +12,7 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
+import FooterForm from "./FooterForm";
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -57,7 +58,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <div className="bg-slate-900/50 p-8 md:p-10 rounded-[2.5rem] border border-white/10 backdrop-blur-xl">
+          <div className="bg-slate-900/50 p-6 rounded-[2.5rem] border border-white/10 backdrop-blur-xl">
             <h4 className="text-xl font-bold text-white mb-2">
               Send us a message
             </h4>
@@ -65,28 +66,7 @@ export default function FooterSection() {
               Response time: Usually within 2 hours.
             </p>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-slate-600 focus:border-orange-500 outline-none transition-all"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-slate-600 focus:border-orange-500 outline-none transition-all"
-                />
-              </div>
-              <textarea
-                placeholder="Tell us about your goal (Learning or Project?)"
-                rows={4}
-                className="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-slate-600 focus:border-orange-500 outline-none transition-all resize-none"
-              ></textarea>
-              <button className="w-full py-4 bg-orange-600 hover:bg-orange-500 text-white font-black rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-900/20">
-                Send Message <Send size={18} />
-              </button>
-            </form>
+            <FooterForm />
           </div>
         </div>
 
