@@ -7,31 +7,53 @@ import Image from "next/image";
 
 const projects = [
   {
-    name: "SkyLine E-Commerce",
-    desc: "A high-performance fashion storefront with real-time inventory and Naira payment integration.",
-    image: "/portfolio/ecommerce.jpg", // Replace with your actual screenshot path
+    name: "MealHub",
+    desc: "A dynamic food ordering platform offering a diverse menu, vendors, real-time order and preorder tracking, meal planning, and seamless payment options for a delightful dining experience.",
+    image: "/images/projects/mealhub.png",
     tech: ["Next.js", "Tailwind", "Paystack", "MongoDB"],
-    live: "https://skyline.nexa.dev",
-    github: "https://github.com/nexa/skyline",
+    live: "https://www.mealhub.com.ng",
+    github: "https://github.com/salv20/mealhub",
     category: "Full-Stack",
   },
+
   {
-    name: "FinTrack Dashboard",
-    desc: "A complex data visualization tool for small businesses to track daily expenses and revenue.",
-    image: "/portfolio/dashboard.jpg",
-    tech: ["React", "Chart.js", "Firebase", "TypeScript"],
-    live: "https://fintrack.nexa.dev",
-    github: "https://github.com/nexa/fintrack",
-    category: "Frontend",
-  },
-  {
-    name: "Luxe Real Estate",
-    desc: "A premium landing page for property listings with advanced filtering and map integration.",
-    image: "/portfolio/realestate.jpg",
-    tech: ["HTML5", "Sass", "JavaScript", "GSAP"],
-    live: "https://luxe.nexa.dev",
-    github: "https://github.com/nexa/luxe",
+    name: "Cypherx Website",
+    desc: "A modern fintech platform offering secure transactions, escrow services, smart budgeting tools, and real-time financial insights for effortless money management.",
+    image: "/images/projects/cypherx-landing-page.png",
+    tech: ["React.js", "Tailwind", "JavaScript", "Framer Motion"],
+    live: "https://cypherxwallet.com",
+    github: "https://github.com/CypherX-Mobile-LTD/cypherx_landing_website",
     category: "Landing Page",
+  },
+
+  {
+    name: "E-Commerce Store",
+    desc: "A modern e-commerce site featuring dynamic product listings, secure checkout, and seamless cart management for a smooth shopping experience.",
+    image: "/images/projects/sean-store.png",
+    tech: ["Tailwind", "JavaScript", "Framer Motion"],
+    live: "https://seanstore-1.vercel.app",
+    github: "https://github.com/salv20/seanstore",
+    category: "E-Commerce",
+  },
+
+  {
+    name: "King 01 Football Club",
+    desc: "A modern football scouting platform connecting players, scouts, and clubs with advanced search, performance tracking, and secure deal management.",
+    image: "/images/projects/king01fc.png",
+    tech: ["Next.js", "Tailwind", "JavaScript", "Framer Motion"],
+    live: "https://king01footballclub.com",
+    github: "https://github.com/salv20/king-01-football-club",
+    category: "Dashboard",
+  },
+
+  {
+    name: "Cypherx Web App",
+    desc: "A secure fintech platform enabling seamless digital wallet management, real-time transactions, blogs available for the community and intuitive UI with light/dark mode support.",
+    image: "/images/projects/cypherx-web-app.png",
+    tech: ["React.js", "Framer Motion", "Node.js", "TypeScript"],
+    live: "https://app-staging.cypherxwallet.com",
+    github: "https://github.com/CypherX-Mobile-LTD/web-app",
+    category: "Frontend",
   },
 ];
 
