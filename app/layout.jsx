@@ -25,7 +25,7 @@ export const metadata = {
     title: "Nexea | Learn Web Development Online in Nigeria",
     description:
       "Join Nexea and master web development with practical projects, expert mentorship, and job-ready skills. Start building your future today!",
-    url: "https://nexea.buzz",
+    url: "https://www.nexea.com.ng",
     siteName: "Nexea",
     images: [
       {

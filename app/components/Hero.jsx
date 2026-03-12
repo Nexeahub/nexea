@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 md:mx-auto lg:mx-0">
             <Link
               href="/#pricing"
-              className="group relative cursor-pointer overflow-hidden rounded-full bg-slate-900 px-8 md:px-4 xl:px-8 py-4 font-bold text-white transition-all hover:bg-orange-600"
+              className="group relative text-center cursor-pointer overflow-hidden rounded-full bg-slate-900 px-8 py-4 font-bold text-white transition-all hover:bg-orange-600"
             >
               <span className="relative z-10">Start Learning</span>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-orange-600 to-orange-400 opacity-0 transition-opacity group-hover:opacity-100" />
