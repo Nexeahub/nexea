@@ -159,7 +159,7 @@ export default function AnimatedHeroBox() {
               <div className="h-8 w-8 rounded bg-orange-600 flex items-center justify-center text-white font-bold italic">
                 N
               </div>
-              <span className="text-xl font-bold tracking-tight">Nexa</span>
+              <span className="text-xl font-bold tracking-tight">Nexea</span>
             </div>
             <div className="relative z-10 flex flex-col gap-2">
               <div className="w-1 h-8 bg-white/10 rounded-full" />

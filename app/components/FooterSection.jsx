@@ -41,7 +41,7 @@ export default function FooterSection() {
             </div>
             <h3 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter">
               Ready to build <br /> with{" "}
-              <span className="text-orange-500 italic">Nexa?</span>
+              <span className="text-orange-500 italic">Nexea?</span>
             </h3>
             <p className="text-slate-400 text-lg mb-8 max-w-md">
               Whether you&apos;re joining the Academy or hiring our Agency,
@@ -86,11 +86,11 @@ export default function FooterSection() {
                 N
               </div>
               <span className="text-xl font-black text-white tracking-tighter">
-                NEXA
+                NEXeA
               </span>
             </div>
             <p className="text-slate-500 text-xs text-center md:text-left">
-              &copy; {currentYear} Nexa Web Academy & Agency. <br /> All rights
+              &copy; {currentYear} Nexea Web Academy & Agency. <br /> All rights
               reserved. Built with precision in Nigeria.
             </p>
           </div>

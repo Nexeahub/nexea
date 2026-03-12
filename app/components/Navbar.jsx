@@ -36,7 +36,7 @@ export default function Navbar() {
           <div className="h-8 w-8 rounded bg-orange-600 flex items-center justify-center text-white font-bold italic">
             N
           </div>
-          <span className="text-xl font-bold tracking-tight">Nexa</span>
+          <span className="text-xl font-bold tracking-tight">Nexea</span>
         </div>
 
         {/* Desktop Navigation */}

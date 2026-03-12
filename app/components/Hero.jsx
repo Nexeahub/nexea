@@ -20,7 +20,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
             </span>
-            Nexa v1.0 is live
+            Nexea v1.0 is live
           </div>
 
           <h1 className="text-5xl md:text-center lg:text-left font-black leading-[1.1] tracking-tight text-slate-900 xl:text-6xl">

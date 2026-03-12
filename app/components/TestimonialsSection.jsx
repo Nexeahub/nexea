@@ -9,14 +9,14 @@ const clientProof = [
     name: "Mensah P.",
     role: "Business Owner",
     content:
-      "I hired the Nexa team to build my football academy portal. Not only did they deliver a fast site, but they explained the tech so clearly that I actually understood my own platform. They are natural teachers.",
+      "I hired the Nexea team to build my football academy portal. Not only did they deliver a fast site, but they explained the tech so clearly that I actually understood my own platform. They are natural teachers.",
     label: "Agency Client",
   },
   {
     name: "Princess U.",
     role: "Startup Founder",
     content:
-      "The way Nexa handles code is different. They don't just 'fix' things; they show you why they work. If they are teaching now, you'd be crazy not to join.",
+      "The way Nexea handles code is different. They don't just 'fix' things; they show you why they work. If they are teaching now, you'd be crazy not to join.",
     label: "Early Partner",
   },
 ];
@@ -25,7 +25,7 @@ const betaStudent = {
   name: "Junior Developer",
   role: "Beta Access Student",
   content:
-    "I was one of the first to see the Nexa Frontend curriculum. The 'Project-First' method is exactly what's missing in other courses. It's intense but worth every Naira.",
+    "I was one of the first to see the Nexea Frontend curriculum. The 'Project-First' method is exactly what's missing in other courses. It's intense but worth every Naira.",
   label: "Beta Learner",
 };
 

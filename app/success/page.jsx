@@ -189,7 +189,7 @@ export default function SuccessPage() {
             Payment <span className="text-orange-500 italic">Confirmed!</span>
           </h1>
           <p className="text-slate-400 text-lg mb-12">
-            Welcome to Nexa,&nbsp;
+            Welcome to Nexea,&nbsp;
             <span className="text-orange-500 italic">{registration.name}</span>
             . You&apos;re officially enrolled in the <br />
             <span className="text-white font-bold">

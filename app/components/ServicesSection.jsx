@@ -60,7 +60,7 @@ export default function ServicesSection() {
               <span className="text-orange-600 italic">We Build it.</span>
             </h3>
             <p className="text-slate-500 text-lg mb-10 leading-relaxed">
-              Beyond the academy, Nexa operates as a world-class development
+              Beyond the academy, Nexea operates as a world-class development
               agency. We take your vision and turn it into a high-performance
               digital reality.
             </p>
@@ -85,7 +85,7 @@ export default function ServicesSection() {
                 <p className="text-2xl font-black">Custom Pricing</p>
               </div>
               <a
-                href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20build%20a%20website%20and%20get%20more%20details%20about%20your%20pricing."
+                href="https://wa.me/2349030866613?text=Hello%20Nexea,%20I%20would%20like%20to%20build%20a%20website%20and%20get%20more%20details%20about%20your%20pricing."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-3 bg-orange-600 hover:bg-orange-500 rounded-full font-bold transition-all shadow-lg shadow-orange-900/20 text-center"

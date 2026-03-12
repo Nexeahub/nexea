@@ -35,7 +35,7 @@ const AdmissionReceipt = ({ registration }) => {
       pdf.text("N", 27, 32);
 
       pdf.setFontSize(22);
-      pdf.text("NEXA ACADEMY", 45, 32);
+      pdf.text("NEXEA ACADEMY", 45, 32);
 
       pdf.setFontSize(9);
       pdf.setTextColor(234, 88, 12);
@@ -112,13 +112,13 @@ const AdmissionReceipt = ({ registration }) => {
       pdf.setFontSize(10);
 
       pdf.text(
-        "1. Join the private Nexa Discord using your registered email.",
+        "1. Join the private Nexea Discord using your registered email.",
         25,
         192,
       );
 
       pdf.text(
-        "2. Follow Nexa on X for ecosystem updates and pioneer news.",
+        "2. Follow Nexea on X for ecosystem updates and pioneer news.",
         25,
         202,
       );
@@ -137,13 +137,13 @@ const AdmissionReceipt = ({ registration }) => {
       pdf.setFontSize(8);
 
       pdf.text(
-        "AUTHENTICATED DIGITAL ADMISSION • NEXA ACADEMY",
+        "AUTHENTICATED DIGITAL ADMISSION • NEXeA ACADEMY",
         pageWidth / 2,
         265,
         { align: "center" },
       );
 
-      pdf.save(`Nexa_Admission_${registration.name.split(" ")[0]}.pdf`);
+      pdf.save(`Nexea_Admission_${registration.name.split(" ")[0]}.pdf`);
     } catch (error) {
       console.error("PDF Error:", error);
     } finally {

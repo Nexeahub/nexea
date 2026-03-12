@@ -133,7 +133,7 @@ export default function AboutUsSection() {
             </h3>
 
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              Nexa was born from a simple observation: most bootcamps teach you
+              Nexea was born from a simple observation: most bootcamps teach you
               how to code, but very few teach you how to ship. We operate as a
               hybrid **Development Academy & Full-Service Agency**, meaning our
               students learn the exact stack we use to build for our enterprise
@@ -162,14 +162,14 @@ export default function AboutUsSection() {
             </div>
 
             <motion.a
-              href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20learn%20more%20about%20Nexa."
+              href="https://wa.me/2349030866613?text=Hello%20Nexea,%20I%20would%20like%20to%20learn%20more%20about%20Nexea."
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-10 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-orange-500 hover:text-white transition-all shadow-xl shadow-orange-500/10 inline-block"
             >
-              Learn More About Nexa
+              Learn More About Nexea
             </motion.a>
           </motion.div>
         </div>

@@ -21,14 +21,14 @@ const faqs = [
       "Our Frontend track is self-paced but structured to be completed in 10-12 weeks if you dedicate 10-15 hours a week. Since we focus on project-based learning, you'll have a professional portfolio by the time you finish.",
   },
   {
-    question: "How much does it cost to build a website with Nexa Agency?",
+    question: "How much does it cost to build a website with Nexea Agency?",
     answer:
       "Every business is unique. Our starter professional sites begin at ₦150,000, while complex e-commerce or custom web apps are quoted based on features. Contact us for a free consultation and project roadmap.",
   },
   {
     question: "Will I get a certificate after the training?",
     answer:
-      "Yes. Upon successful completion of all core projects and a final review by our senior engineers, you will receive a Nexa Verified Digital Certificate to showcase your skills to employers.",
+      "Yes. Upon successful completion of all core projects and a final review by our senior engineers, you will receive a Nexea Verified Digital Certificate to showcase your skills to employers.",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function FAQSection() {
               Still have questions about the ₦50,000 launch offer?
             </p>
             <a
-              href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20make%20more%20enquiries%20about%20your%20services."
+              href="https://wa.me/2349030866613?text=Hello%20Nexea,%20I%20would%20like%20to%20make%20more%20enquiries%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
             >

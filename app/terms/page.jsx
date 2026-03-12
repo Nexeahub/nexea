@@ -8,12 +8,12 @@ const sections = [
   {
     title: "1. Acceptance of Terms",
     content:
-      "By accessing Nexa Web Academy & Agency, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our services or enroll in our courses.",
+      "By accessing Nexea Web Academy & Agency, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our services or enroll in our courses.",
   },
   {
     title: "2. Academy Enrollment & Access",
     content:
-      "Course access is granted to a single user per purchase. Sharing account credentials or redistributing Nexa curriculum materials (videos, code snippets, PDFs) is strictly prohibited and will result in immediate termination of access without refund.",
+      "Course access is granted to a single user per purchase. Sharing account credentials or redistributing Nexea curriculum materials (videos, code snippets, PDFs) is strictly prohibited and will result in immediate termination of access without refund.",
   },
   {
     title: "3. Payments & Refunds (Academy)",
@@ -23,17 +23,17 @@ const sections = [
   {
     title: "4. Agency Services & Projects",
     content:
-      "Service projects require a 50% upfront deposit before work commences. The remaining balance is due upon project completion but before final deployment/handover. Nexa retains ownership of all code until final payment is received.",
+      "Service projects require a 50% upfront deposit before work commences. The remaining balance is due upon project completion but before final deployment/handover. Nexea retains ownership of all code until final payment is received.",
   },
   {
     title: "5. Intellectual Property",
     content:
-      "All content, including the 'Nexa' brand, logos, and educational frameworks, are the property of Nexa. Students are granted a limited license to use the code they build for their own portfolios but cannot resell our curriculum.",
+      "All content, including the 'Nexea' brand, logos, and educational frameworks, are the property of Nexea. Students are granted a limited license to use the code they build for their own portfolios but cannot resell our curriculum.",
   },
   {
     title: "6. Limitation of Liability",
     content:
-      "Nexa provides education and services 'as is.' While we strive for 100% student success and high-performance websites, we do not guarantee specific employment outcomes or third-party API uptimes.",
+      "Nexea provides education and services 'as is.' While we strive for 100% student success and high-performance websites, we do not guarantee specific employment outcomes or third-party API uptimes.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function TermsAndConditions() {
               <div>
                 <h4 className="font-bold text-white mb-2">Important Notice</h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  These terms are subject to change as Nexa evolves. We will
+                  These terms are subject to change as Nexea evolves. We will
                   notify active students and clients via email regarding
                   significant updates. Continued use of the platform after
                   changes constitutes acceptance of the new terms.
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
             Have questions about our legal policies?
           </p>
           <a
-            href="https://wa.me/2349030866613?text=Hello%20Nexa,%20I%20would%20like%20to%20contact%20the%20Legal%20Department%20for%20more%20information."
+            href="https://wa.me/2349030866613?text=Hello%20Nexea,%20I%20would%20like%20to%20contact%20the%20Legal%20Department%20for%20more%20information."
             target="_blank"
             rel="noopener noreferrer"
           >

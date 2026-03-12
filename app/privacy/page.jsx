@@ -27,7 +27,7 @@ const privacySections = [
     title: "Third-Party Sharing",
     icon: <Globe className="text-orange-500" size={20} />,
     content:
-      "Nexa does not sell your personal data. We only share information with essential service providers (like email hosting or cloud storage) that help us run the academy and agency, all of whom are committed to data protection.",
+      "Nexea does not sell your personal data. We only share information with essential service providers (like email hosting or cloud storage) that help us run the academy and agency, all of whom are committed to data protection.",
   },
   {
     title: "Your Rights",
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
             Privacy <span className="text-orange-500">Policy</span>
           </h1>
           <p className="text-slate-400">
-            Protecting your digital footprint at Nexa.
+            Protecting your digital footprint at Nexea.
           </p>
         </motion.div>
 
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
         >
           <h3 className="text-lg font-bold mb-2">Cookies & Analytics</h3>
           <p className="text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            We use cookies to understand how you interact with Nexa. This helps
+            We use cookies to understand how you interact with Nexea. This helps
             us optimize our curriculum and agency workflows. By using our site,
             you consent to our use of these essential tracking tools.
           </p>
@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
             href="mailto:nexeahub@gmail.com"
             className="text-orange-500 font-bold hover:underline underline-offset-8 mt-2 inline-block"
           >
-            privacy@nexa.academy
+            privacy@nexea.academy
           </a>
         </div>
       </div>

@@ -116,7 +116,7 @@ export default function RegistrationPage() {
               Secure Your Spot
             </h1>
             <p className="text-slate-400">
-              Join the Nexa founding cohort. Fill in your details to proceed to
+              Join the Nexea founding cohort. Fill in your details to proceed to
               payment.
             </p>
           </div>
