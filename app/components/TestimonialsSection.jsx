@@ -13,7 +13,7 @@ const clientProof = [
     label: "Agency Client",
   },
   {
-    name: "Princess P.",
+    name: "Princess U.",
     role: "Startup Founder",
     content:
       "The way Nexa handles code is different. They don't just 'fix' things; they show you why they work. If they are teaching now, you'd be crazy not to join.",
@@ -31,7 +31,7 @@ const betaStudent = {
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-slate-50 py-24 px-6">
+    <section className="bg-slate-50 py-20 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">

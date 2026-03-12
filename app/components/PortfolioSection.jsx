@@ -59,7 +59,7 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="bg-white py-24 px-6">
+    <section id="portfolio" className="bg-white py-20 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">

@@ -48,7 +48,7 @@ const roadmaps = [
 
 export default function RoadmapsSection() {
   return (
-    <section className="bg-slate-950 py-24 px-6">
+    <section className="bg-slate-950 py-20 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div className="max-w-xl">

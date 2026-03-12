@@ -47,7 +47,7 @@ const steps = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white py-24 px-6 text-slate-900">
+    <section className="bg-white py-20 px-6 text-slate-900">
       <div className="container mx-auto">
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
           {/* LEFT: CONTENT & PROCESS */}

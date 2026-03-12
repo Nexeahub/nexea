@@ -26,7 +26,7 @@ const features = [
 
 export default function AboutUsSection() {
   return (
-    <section className="relative bg-[#020617] py-24 px-6 overflow-hidden">
+    <section className="relative bg-[#020617] py-20 px-6 overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 -z-0 h-[500px] w-[500px] bg-orange-600/5 blur-[120px] rounded-full" />
 
