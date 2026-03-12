@@ -162,9 +162,7 @@ export default function AboutUsSection() {
             </div>
 
             <motion.a
-              href="https://wa.me/2349030866613?text=Hello%20Nexea,%20I%20would%20like%20to%20learn%20more%20about%20Nexea."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#Faqs"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-10 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-orange-500 hover:text-white transition-all shadow-xl shadow-orange-500/10 inline-block"
