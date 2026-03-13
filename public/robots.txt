@@ -1,5 +1,5 @@
 User-agent: *
+Disallow: /api/
 Allow: /
 
-# Direct link to your sitemap
-Sitemap: http://localhost:3000/api/sitemap.xml
+Sitemap: https://www.nexea.com.ng/sitemap.xml
