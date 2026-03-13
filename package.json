@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node app/api/generate-sitemap.js",
     "start": "next start",
     "lint": "eslint"
   },
@@ -21,7 +21,8 @@
     "paystack": "^2.0.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "sitemap": "^9.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
