@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import AnimatedHeroBox from "./AnimatedHeroBox";
 import Link from "next/link";
+import CountdownTimer from "./CountdownTimer";
 
 export default function Hero() {
   return (
@@ -87,6 +88,8 @@ export default function Hero() {
               enterprise partners
             </p>
           </div> */}
+
+          <CountdownTimer targetDate="2026-04-10" />
         </motion.div>
 
         <div className="flex items-center justify-center relative">
