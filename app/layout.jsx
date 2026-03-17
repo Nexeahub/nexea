@@ -15,35 +15,65 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Nexea | Learn Web Development Online in Nigeria",
+  metadataBase: new URL("https://www.nexea.com.ng"),
+
+  title: {
+    default: "Nexea Web Development Academy | Learn React & Next.js Online",
+    template: "%s | Nexea Academy",
+  },
+
   description:
-    "Join Nexea and master web development with practical projects, expert mentorship, and job-ready skills. Register now and start building your future!",
-  keywords:
-    "Web Development, Next.js, React, HTML, CSS, JavaScript, Online Academy, Nigeria, Learn to Code, Programming, Student Courses",
-  author: "Nexea",
+    "Nexea is a modern web development academy. Learn React, Next.js, and frontend development online with real-world projects, mentorship, and job-ready training.",
+
+  keywords: [
+    "web development academy",
+    "learn web development online",
+    "React course online",
+    "Next.js training",
+    "frontend development course",
+    "coding school",
+  ],
+
+  authors: [{ name: "Nexea", url: "https://www.nexea.com.ng" }],
+  creator: "Nexea",
+  publisher: "Nexea",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  alternates: {
+    canonical: "https://www.nexea.com.ng",
+  },
+
   openGraph: {
-    title: "Nexea | Learn Web Development Online in Nigeria",
+    title: "Nexea Web Development Academy | Learn React & Next.js Online",
     description:
-      "Join Nexea and master web development with practical projects, expert mentorship, and job-ready skills. Start building your future today!",
+      "Become a job-ready developer with Nexea. Learn React, Next.js, and modern web development from anywhere.",
     url: "https://www.nexea.com.ng",
     siteName: "Nexea",
     images: [
       {
         url: "/nexea-logo.png",
-        width: 1024,
-        height: 1024,
-        alt: "Nexea - Learn Web Development",
+        width: 1200,
+        height: 630,
+        alt: "Nexea Web Development Academy",
       },
     ],
+    locale: "en",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Nexea | Learn Web Development Online in Nigeria",
+    title: "Nexea Web Development Academy",
     description:
-      "Join Nexea and master web development with practical projects, expert mentorship, and job-ready skills.",
+      "Learn web development online with Nexea. React, Next.js, and real-world projects.",
     images: ["/nexea-logo.png"],
   },
+
+  category: "education",
 };
 
 export default function RootLayout({ children }) {
@@ -52,10 +82,26 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "Nexea",
+              url: "https://www.nexea.com.ng",
+              logo: "https://www.nexea.com.ng/nexea-logo.png",
+              sameAs: ["https://twitter.com/", "https://linkedin.com/"],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "NG",
+              },
+            }),
+          }}
+        />
+
         <Navbar />
-
         <main>{children}</main>
-
         <FooterSection />
         <WhatsAppButton />
       </body>

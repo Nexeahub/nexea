@@ -24,20 +24,31 @@ export default function Hero() {
             Nexea v1.0 is live
           </div>
 
-          <h1 className="text-5xl md:text-center lg:text-left font-black leading-[1.1] tracking-tight text-slate-900 xl:text-6xl">
+          {/* <h1 className="text-5xl md:text-center lg:text-left font-black leading-[1.1] tracking-tight text-slate-900 xl:text-6xl">
             Learn to Build <br />
             <span className="bg-gradient-to-r from-orange-600 to-rose-500 bg-clip-text text-transparent">
               Modern Websites
             </span>
             <br />— Or Let Us Build Yours
+          </h1> */}
+
+          <h1 className="text-4xl xl:text-5xl md:text-center lg:text-left font-black leading-[1.1] tracking-tight text-slate-900 ">
+            Learn Web Development Online <br />
+            <span className="bg-gradient-to-r text-2xl lg:text-4xl xl:text-2xl from-orange-600 to-rose-500 bg-clip-text text-transparent">
+              Build Modern Websites with React & Next.js
+            </span>
+            <br />— Or Let Us Build Yours
           </h1>
 
           <p className="mt-8 max-w-lg text-lg md:mx-auto lg:mx-0 leading-relaxed text-slate-600">
-            Master real-world web development with hands-on lessons in
-            <strong> React</strong>, <strong>Next.js</strong>,
-            <strong> UI/UX</strong>, and <strong>deployment</strong>. Need a
-            professional website instead? Our expert team can design and build
-            it for you — fast, modern, and fully responsive.
+            Join a leading <strong>web development academy in Nigeria</strong>{" "}
+            and learn in-demand skills from anywhere in the world. Master{" "}
+            <strong>React</strong>, <strong>Next.js</strong>,{" "}
+            <strong>Javascript</strong>, and deployment through hands-on,
+            real-world projects. Whether you&apos;re starting your tech journey
+            or upgrading your skills, Nexea helps you become job-ready. Need a
+            professional website? Our expert team builds fast, modern, and
+            scalable solutions.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 md:mx-auto lg:mx-0">
@@ -89,7 +100,7 @@ export default function Hero() {
             </p>
           </div> */}
 
-          <CountdownTimer targetDate="2026-04-10" />
+          {/* <CountdownTimer targetDate="2026-04-10" /> */}
         </motion.div>
 
         <div className="flex items-center justify-center relative">
