@@ -10,7 +10,8 @@ const tracks = [
     title: "Frontend Development",
     id: "frontend",
     status: "active",
-    price: "₦50,000",
+    price: 50000,
+    discount: 0.4,
     color: "blue",
     icon: <Globe className="text-blue-500" />,
     description:
@@ -79,6 +80,10 @@ const tracks = [
   },
 ];
 
+const formatCurrency = (amount) => `₦${amount.toLocaleString()}`;
+
+const getDiscountedPrice = (price, discount) => price - price * discount;
+
 export default function PricingSection() {
   return (
     <section
@@ -135,9 +140,36 @@ export default function PricingSection() {
                   >
                     {track.icon}
                   </div>
-                  <span className="text-2xl font-black text-white">
+                  {/* <span className="text-2xl font-black text-white">
                     {track.price}
-                  </span>
+                  </span> */}
+
+                  <div className="text-right">
+                    {track.discount ? (
+                      <>
+                        {/* Old Price */}
+                        <p className="text-sm text-slate-500 line-through">
+                          {formatCurrency(track.price)}
+                        </p>
+
+                        {/* New Price */}
+                        <p className="text-2xl font-black text-white">
+                          {formatCurrency(
+                            getDiscountedPrice(track.price, track.discount),
+                          )}
+                        </p>
+
+                        {/* Discount Badge */}
+                        <span className="text-[10px] font-bold bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
+                          {track.discount * 100}% OFF
+                        </span>
+                      </>
+                    ) : (
+                      <p className="text-2xl font-black text-white">
+                        {formatCurrency(track.price)}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2">

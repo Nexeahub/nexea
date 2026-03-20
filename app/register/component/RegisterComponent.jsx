@@ -22,30 +22,31 @@ export default function RegisterComponent() {
   });
   const [errors, setErrors] = useState({});
 
-  // Hardcoded Track Data
   const tracks = [
     {
       name: "Frontend Development",
       cohort: "Founding Cohort (V1.0)",
       price: 50000,
-      currency: "₦",
+      discount: 0.4,
       selectable: true,
     },
     {
       name: "Backend Development",
       cohort: "Founding Cohort (V1.0)",
       price: "XX,XXX",
-      currency: "₦",
       selectable: false,
     },
     {
       name: "Fullstack Development",
       cohort: "Founding Cohort (V1.0)",
       price: "XX,XXX",
-      currency: "₦",
       selectable: false,
     },
   ];
+
+  const formatCurrency = (amount) => `₦${amount.toLocaleString()}`;
+
+  const getDiscountedPrice = (price, discount) => price - price * discount;
 
   const [selectedTrack, setSelectedTrack] = useState(tracks[0]);
 
@@ -67,8 +68,6 @@ export default function RegisterComponent() {
     if (!validate()) return;
 
     setLoading(true);
-
-    console.log(formData);
 
     try {
       const res = await fetch("/api/checkout", {
@@ -121,8 +120,6 @@ export default function RegisterComponent() {
             </p>
           </div>
 
-          {/*  */}
-
           <div className="space-y-4">
             <label className="text-xs font-bold uppercase text-slate-500 ml-1 mb-2 block">
               Select Track
@@ -142,15 +139,36 @@ export default function RegisterComponent() {
                 >
                   <h3 className="font-bold text-sm">{track.name}</h3>
                   <p className="text-[10px] text-slate-400">{track.cohort}</p>
-                  <p className="text-xs font-black mt-2">
-                    {track.currency}
-                    {track.price.toLocaleString()}
-                  </p>
-                  {!track.selectable && (
+
+                  <div className="text-right">
+                    {track.discount ? (
+                      <>
+                        <p className="text-sm text-slate-500 line-through">
+                          {formatCurrency(track.price)}
+                        </p>
+
+                        <p className="text-lg font-black text-white">
+                          {formatCurrency(
+                            getDiscountedPrice(track.price, track.discount),
+                          )}
+                        </p>
+
+                        <span className="text-[10px] font-bold bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
+                          {track.discount * 100}% OFF
+                        </span>
+                      </>
+                    ) : (
+                      <p className="text-2xl font-black text-white">
+                        {formatCurrency(track.price)}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* {!track.selectable && (
                     <span className="text-[10px] text-red-500 mt-1 block">
                       Not Available
                     </span>
-                  )}
+                  )} */}
                 </button>
               ))}
             </div>
@@ -297,10 +315,37 @@ export default function RegisterComponent() {
                 <span className="text-[10px] font-black text-slate-500 uppercase">
                   Grand Total
                 </span>
-                <p className="text-4xl font-black italic">
+                {/* <p className="text-4xl font-black italic">
                   {selectedTrack.currency}
                   {selectedTrack.price.toLocaleString()}
-                </p>
+                </p> */}
+
+                <div className="text-right">
+                  {selectedTrack.discount ? (
+                    <>
+                      <p className="text-sm text-slate-500 line-through">
+                        {formatCurrency(selectedTrack.price)}
+                      </p>
+
+                      <p className="text-lg font-black text-white">
+                        {formatCurrency(
+                          getDiscountedPrice(
+                            selectedTrack.price,
+                            selectedTrack.discount,
+                          ),
+                        )}
+                      </p>
+
+                      <span className="text-[10px] font-bold bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
+                        {selectedTrack.discount * 100}% OFF
+                      </span>
+                    </>
+                  ) : (
+                    <p className="text-2xl font-black text-white">
+                      {formatCurrency(selectedTrack.price)}
+                    </p>
+                  )}
+                </div>
               </div>
               <div className="bg-white/5 px-3 py-1 rounded-lg border border-white/10">
                 <span className="text-[10px] font-bold text-slate-400">

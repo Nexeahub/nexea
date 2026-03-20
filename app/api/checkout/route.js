@@ -7,10 +7,8 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
-    // Connect to MongoDB
     await connectDB();
 
-    // Ensure track info exists
     if (!body.track || !body.track.price || !body.track.name) {
       return NextResponse.json(
         { error: "Track information is missing or incomplete" },
@@ -18,8 +16,12 @@ export async function POST(req) {
       );
     }
 
-    // Convert amount to kobo
-    const amount = body.track.price * 100;
+    const discount = body.track.discount || 0;
+
+    const discountedPrice = body.track.price - body.track.price * discount;
+
+    // Convert to kobo
+    const amount = Math.round(discountedPrice * 100);
 
     // Save user registration in MongoDB
     const registration = await RegistrationSchema.create({
@@ -31,10 +33,10 @@ export async function POST(req) {
       paymentReference: "",
     });
 
-    // 2. Use the generated MongoDB ID as the reference
+    // Use the generated MongoDB ID as the reference
     const refId = registration._id.toString();
 
-    // 3. Update the document with that reference
+    // Update the document with that reference
     registration.paymentReference = refId;
     await registration.save();
 
