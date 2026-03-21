@@ -35,6 +35,7 @@ export default function FooterForm() {
     setError("");
 
     try {
+      // sendForm automatically maps input 'name' attributes to {{tags}} in your template
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
@@ -74,7 +75,7 @@ export default function FooterForm() {
                   )}
                 </div>
                 <input
-                  name="name"
+                  name="name" // Matches {{name}} in template
                   value={values.name}
                   onChange={handleChange}
                   placeholder="Your Name"
@@ -112,7 +113,7 @@ export default function FooterForm() {
                 </span>
               </div>
               <textarea
-                name="message"
+                name="message" // Matches {{message}} in template
                 value={values.message}
                 onChange={handleChange}
                 rows={4}
