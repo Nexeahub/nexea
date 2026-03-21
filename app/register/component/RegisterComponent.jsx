@@ -146,16 +146,17 @@ export default function RegisterComponent() {
                         <p className="text-sm text-slate-500 line-through">
                           {formatCurrency(track.price)}
                         </p>
+                        <div className="flex  flex-row-reverse  md:flex-col justify-between md:items-end items-center ">
+                          <p className="text-lg font-black text-white">
+                            {formatCurrency(
+                              getDiscountedPrice(track.price, track.discount),
+                            )}
+                          </p>
 
-                        <p className="text-lg font-black text-white">
-                          {formatCurrency(
-                            getDiscountedPrice(track.price, track.discount),
-                          )}
-                        </p>
-
-                        <span className="text-[10px] font-bold bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
-                          {track.discount * 100}% OFF
-                        </span>
+                          <span className="text-[10px] w-fit font-bold bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
+                            {track.discount * 100}% OFF
+                          </span>
+                        </div>
                       </>
                     ) : (
                       <p className="text-2xl font-black text-white">
