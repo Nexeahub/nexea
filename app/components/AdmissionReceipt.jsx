@@ -112,7 +112,7 @@ const AdmissionReceipt = ({ registration }) => {
       pdf.setFontSize(10);
 
       pdf.text(
-        "1. Join the private Nexea Discord using your registered email.",
+        "1. Join the private Nexea WhatsApp group using your registered email.",
         25,
         192,
       );

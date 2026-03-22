@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import {
   Check,
-  Discord,
+  MessageCircle,
   Calendar,
   ArrowRight,
   Sparkles,
@@ -254,10 +254,11 @@ export default function SuccessPage() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="https://discord.gg/eJSKB6GjAq"
-              className="flex items-center justify-center gap-3 bg-[#5865F2] py-4 rounded-2xl font-bold shadow-lg shadow-indigo-900/20"
+              href="https://chat.whatsapp.com/CJRXNiITnhI0326U0QYux9"
+              className="flex items-center justify-center gap-3 bg-[#25D366] py-4 rounded-2xl font-bold shadow-lg shadow-green-900/20 text-white"
             >
-              Join Private Discord <ArrowRight size={18} />
+              <MessageCircle size={20} fill="currentColor" />
+              Join WhatsApp Group <ArrowRight size={18} />
             </motion.a>
 
             <motion.a

@@ -187,6 +187,7 @@ export default function RegisterComponent() {
                   <input
                     type="text"
                     name="name"
+                    disabled={loading}
                     placeholder="John Doe"
                     className={`w-full capitalize bg-slate-900/50 border ${errors.name ? "border-red-500" : "border-white/10"} rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-orange-500 transition-all`}
                     value={formData.name}
@@ -211,6 +212,7 @@ export default function RegisterComponent() {
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
                   <input
                     type="email"
+                    disabled={loading}
                     placeholder="john@example.com"
                     className={`w-full bg-slate-900/50 border ${errors.email ? "border-red-500" : "border-white/10"} rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-orange-500 transition-all`}
                     value={formData.email}
@@ -235,6 +237,7 @@ export default function RegisterComponent() {
                   <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
                   <input
                     type="tel"
+                    disabled={loading}
                     name="phone"
                     placeholder="0801 234 5678"
                     className={`w-full bg-slate-900/50 border ${errors.whatsapp ? "border-red-500" : "border-white/10"} rounded-2xl py-4 pl-12 pr-4 outline-none focus:border-orange-500 transition-all`}
